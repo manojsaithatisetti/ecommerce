@@ -1,0 +1,31 @@
+
+
+import React from 'react'
+import { booksData } from '../data/books'
+import Navbar from '../Components/Navbar'
+
+
+const BookPage = () => {
+  return (
+    <>
+    <Navbar/>
+     <div className='pageSection'>
+       {booksData.map((item)=> {
+         return (
+             <div>
+                 <div className="pageImg">
+                     <img src = {item.image} alt="" />
+                 </div>
+                 <div className="proModel">
+                     {item.company},{item.model}
+                 </div>
+             </div>
+         )
+ 
+       })}
+     </div>
+    </>
+   )
+}
+
+export default BookPage
